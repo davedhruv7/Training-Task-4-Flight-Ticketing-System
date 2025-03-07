@@ -2,10 +2,10 @@
 # For license information, please see license.txt
 
 import frappe
-from frappe.model.document import Document
+from frappe.website.website_generator import WebsiteGenerator
 from frappe.model.naming import make_autoname
 
-class AirplaneFlight(Document):
+class AirplaneFlight(WebsiteGenerator):
     def autoname(self):
         """Generate a unique flight name in the format: Airplane-Code-MM-YYYY-00001"""
         if not self.airplane or not self.date_of_departure:
@@ -22,3 +22,6 @@ class AirplaneFlight(Document):
 
         # Final name format
         self.name = flight_series
+
+    def on_submit(self):
+        self.db_set("status", "Completed")

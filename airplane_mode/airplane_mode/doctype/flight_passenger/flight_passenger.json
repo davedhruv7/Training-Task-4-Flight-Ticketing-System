@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_guest_to_view": 1,
  "autoname": "autoincrement",
  "creation": "2025-03-03 19:41:42.762780",
  "doctype": "DocType",
@@ -8,7 +9,9 @@
   "first_name",
   "last_name",
   "full_name",
-  "date_of_birth"
+  "date_of_birth",
+  "route",
+  "published"
  ],
  "fields": [
   {
@@ -34,16 +37,29 @@
    "fieldtype": "Data",
    "label": "Full Name",
    "read_only": 1
+  },
+  {
+   "fieldname": "route",
+   "fieldtype": "Data",
+   "label": "Route"
+  },
+  {
+   "default": "0",
+   "fieldname": "published",
+   "fieldtype": "Check",
+   "label": "Published"
   }
  ],
+ "has_web_view": 1,
  "index_web_pages_for_search": 1,
+ "is_published_field": "published",
  "links": [
   {
    "link_doctype": "Airplane Ticket",
    "link_fieldname": "passenger"
   }
  ],
- "modified": "2025-03-05 16:50:18.995485",
+ "modified": "2025-03-07 12:14:46.157602",
  "modified_by": "Administrator",
  "module": "Airplane Mode",
  "name": "Flight Passenger",
@@ -63,6 +79,7 @@
    "write": 1
   }
  ],
+ "route": "members",
  "show_title_field_in_link": 1,
  "sort_field": "modified",
  "sort_order": "DESC",

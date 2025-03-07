@@ -1,0 +1,30 @@
+{
+ "attach_print": 0,
+ "channel": "System Notification",
+ "condition": "doc.status == \"Scheduled\"",
+ "creation": "2025-03-07 18:12:01.284922",
+ "date_changed": "date_of_departure",
+ "days_in_advance": 1,
+ "docstatus": 0,
+ "doctype": "Notification",
+ "document_type": "Airplane Flight",
+ "enabled": 1,
+ "event": "New",
+ "idx": 0,
+ "is_standard": 1,
+ "message": "<p>Flight {{ doc.name }} is scheduled to depart in 24 hours.<br />\nDeparture: {{ doc.departure_date }}<br />\nPlease make necessary arrangements.</p>\n",
+ "message_type": "Markdown",
+ "modified": "2025-03-07 18:22:59.278664",
+ "modified_by": "Administrator",
+ "module": "Airplane Mode",
+ "name": "Flight Departure Notification",
+ "owner": "Administrator",
+ "recipients": [
+  {
+   "receiver_by_role": "System Manager"
+  }
+ ],
+ "send_system_notification": 1,
+ "send_to_all_assignees": 0,
+ "subject": "Departs in 24 hours!"
+}

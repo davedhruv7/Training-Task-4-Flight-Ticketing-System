@@ -138,9 +138,11 @@
    "options": "Airplane Ticket Add-on Item"
   },
   {
+   "fetch_from": "flight.price",
    "fieldname": "flight_price",
    "fieldtype": "Currency",
    "label": "Flight Price",
+   "read_only": 1,
    "reqd": 1
   },
   {
@@ -175,7 +177,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-03-05 16:46:17.249099",
+ "modified": "2025-03-07 15:54:53.034796",
  "modified_by": "Administrator",
  "module": "Airplane Mode",
  "name": "Airplane Ticket",

@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_guest_to_view": 1,
  "allow_rename": 1,
  "creation": "2025-03-05 13:38:43.521592",
  "doctype": "DocType",
@@ -7,6 +8,7 @@
  "field_order": [
   "section_break_mqxm",
   "airplane",
+  "price",
   "column_break_bpzr",
   "status",
   "airport_details_section",
@@ -20,7 +22,9 @@
   "duration",
   "column_break_fwkr",
   "time_of_departure",
-  "amended_from"
+  "amended_from",
+  "route",
+  "published"
  ],
  "fields": [
   {
@@ -119,9 +123,29 @@
   {
    "fieldname": "column_break_fwkr",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "route",
+   "fieldtype": "Data",
+   "label": "Route"
+  },
+  {
+   "default": "0",
+   "fieldname": "published",
+   "fieldtype": "Check",
+   "label": "Published"
+  },
+  {
+   "fieldname": "price",
+   "fieldtype": "Currency",
+   "label": "Price",
+   "non_negative": 1,
+   "reqd": 1
   }
  ],
+ "has_web_view": 1,
  "index_web_pages_for_search": 1,
+ "is_published_field": "published",
  "is_submittable": 1,
  "links": [
   {
@@ -129,7 +153,7 @@
    "link_fieldname": "flight"
   }
  ],
- "modified": "2025-03-05 16:42:30.648993",
+ "modified": "2025-03-07 15:52:31.186181",
  "modified_by": "Administrator",
  "module": "Airplane Mode",
  "name": "Airplane Flight",
@@ -150,7 +174,21 @@
    "write": 1
   }
  ],
+ "route": "airplane-flight",
  "sort_field": "modified",
  "sort_order": "DESC",
- "states": []
+ "states": [
+  {
+   "color": "Blue",
+   "title": "Scheduled"
+  },
+  {
+   "color": "Green",
+   "title": "Completed"
+  },
+  {
+   "color": "Red",
+   "title": "Cancelled"
+  }
+ ]
 }

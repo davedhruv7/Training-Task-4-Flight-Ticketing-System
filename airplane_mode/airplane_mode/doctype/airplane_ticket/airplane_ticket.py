@@ -50,8 +50,8 @@ class AirplaneTicket(Document):
         # Get a list of taken seats
         taken_seats = {ticket["seat"] for ticket in booked_seats if ticket["seat"]}
 
-        # Possible seat numbers (e.g., A1, B2, etc.)
-        all_seats = [f"{row}{col}" for row in "ABCDEF" for col in range(1, 31)]
+       
+        all_seats = [f"{row}{col}" for row in range(1, 31) for col in "ABCDEF"]
 
         # Find the first available seat
         for seat in all_seats:
