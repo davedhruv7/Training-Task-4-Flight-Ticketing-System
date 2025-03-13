@@ -1,0 +1,30 @@
+{
+ "attach_print": 0,
+ "channel": "System Notification",
+ "condition": "doc.status == \"Scheduled\"\n",
+ "creation": "2025-03-10 11:12:37.394770",
+ "date_changed": "date_of_departure",
+ "days_in_advance": 1,
+ "docstatus": 0,
+ "doctype": "Notification",
+ "document_type": "Airplane Flight",
+ "enabled": 1,
+ "event": "Days Before",
+ "idx": 0,
+ "is_standard": 1,
+ "message": "\ud83d\udea8 Flight **{{ doc.name }}** is departing soon!  \n\u2708 Departure Date: **{{ doc.date_of_departure }}**  \n\ud83d\udccd Location: **{{ doc.departure_location }}**  ",
+ "message_type": "Markdown",
+ "modified": "2025-03-10 11:12:37.394770",
+ "modified_by": "Administrator",
+ "module": "Airplane Mode",
+ "name": "Flight Departure Notification 2",
+ "owner": "Administrator",
+ "recipients": [
+  {
+   "receiver_by_role": "System Manager"
+  }
+ ],
+ "send_system_notification": 0,
+ "send_to_all_assignees": 0,
+ "subject": "Flight {{ doc.name }} is Departing Soon!"
+}

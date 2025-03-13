@@ -8,7 +8,8 @@
  "field_order": [
   "code",
   "city",
-  "country"
+  "country",
+  "gates"
  ],
  "fields": [
   {
@@ -32,11 +33,22 @@
    "label": "Country",
    "options": "Country",
    "reqd": 1
+  },
+  {
+   "fieldname": "gates",
+   "fieldtype": "Table",
+   "label": "Gates",
+   "options": "Gates"
   }
  ],
  "index_web_pages_for_search": 1,
- "links": [],
- "modified": "2025-03-04 12:29:34.176296",
+ "links": [
+  {
+   "link_doctype": "Shop",
+   "link_fieldname": "airport"
+  }
+ ],
+ "modified": "2025-03-12 12:45:18.058115",
  "modified_by": "Administrator",
  "module": "Airplane Mode",
  "name": "Airport",

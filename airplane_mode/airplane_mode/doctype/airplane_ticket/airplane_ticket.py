@@ -15,6 +15,19 @@ class AirplaneTicket(Document):
         """Called before saving the document."""
         self.remove_duplicate_addons()  # Ensure unique add-ons
         self.calculate_total_amount()  # Update total amount
+        airplane = frappe.get_value("Airplane Flight", self.flight, "airplane")
+    
+        if not airplane:
+            frappe.throw("Invalid flight. No associated airplane found.")
+        
+        # Get the capacity of the airplane
+        capacity = frappe.get_value("Airplane", airplane, "capacity")
+
+        # Count the number of tickets already booked for this flight
+        booked_tickets = frappe.db.count("Airplane Ticket", {"flight": self.flight})
+
+        if booked_tickets >= capacity:
+            frappe.throw(f"This flight is fully booked! Maximum capacity: {capacity} seats.")
 
     def remove_duplicate_addons(self):
         """Ensure each add-on type appears only once in the child table."""
@@ -60,3 +73,6 @@ class AirplaneTicket(Document):
                 return
 
         frappe.throw("No available seats for this flight!")
+
+   
+

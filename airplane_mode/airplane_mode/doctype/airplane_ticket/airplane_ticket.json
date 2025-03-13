@@ -28,7 +28,8 @@
   "departure_time",
   "column_break_jjsb",
   "duration_of_flight",
-  "amended_from"
+  "amended_from",
+  "gate_no"
  ],
  "fields": [
   {
@@ -172,12 +173,19 @@
   {
    "fieldname": "column_break_mewx",
    "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "flight.gate_no",
+   "fieldname": "gate_no",
+   "fieldtype": "Data",
+   "label": "Gate No.",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2025-03-07 15:54:53.034796",
+ "modified": "2025-03-11 16:24:46.979996",
  "modified_by": "Administrator",
  "module": "Airplane Mode",
  "name": "Airplane Ticket",

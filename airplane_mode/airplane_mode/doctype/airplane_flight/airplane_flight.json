@@ -17,6 +17,8 @@
   "column_break_sdfb",
   "destination_airport",
   "destination_airport_code",
+  "section_break_qjlu",
+  "crew_members",
   "departure_details_section",
   "date_of_departure",
   "duration",
@@ -24,7 +26,8 @@
   "time_of_departure",
   "amended_from",
   "route",
-  "published"
+  "published",
+  "gate_no"
  ],
  "fields": [
   {
@@ -141,6 +144,22 @@
    "label": "Price",
    "non_negative": 1,
    "reqd": 1
+  },
+  {
+   "fieldname": "section_break_qjlu",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "crew_members",
+   "fieldtype": "Table",
+   "label": "Crew Members",
+   "options": "Flight Crew Member"
+  },
+  {
+   "fieldname": "gate_no",
+   "fieldtype": "Link",
+   "label": "Gate No.",
+   "options": "Gates"
   }
  ],
  "has_web_view": 1,
@@ -153,7 +172,7 @@
    "link_fieldname": "flight"
   }
  ],
- "modified": "2025-03-07 15:52:31.186181",
+ "modified": "2025-03-11 16:18:29.705483",
  "modified_by": "Administrator",
  "module": "Airplane Mode",
  "name": "Airplane Flight",

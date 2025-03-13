@@ -79,6 +79,16 @@ app_license = "mit"
 # 	"filters": "airplane_mode.utils.jinja_filters"
 # }
 
+fixtures = [
+    {"doctype": "Shop Type", "filters": [["shop_type", "in", ["Stall", "Walk-through", "Normal"]]]}
+]
+
+
+override_whitelisted_methods = {
+    "airplane_mode.api.sign_up": "airplane_mode.api.sign_up"
+}
+
+
 # Installation
 # ------------
 

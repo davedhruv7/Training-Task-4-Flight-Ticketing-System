@@ -1,0 +1,28 @@
+{
+ "add_total_row": 0,
+ "columns": [],
+ "creation": "2025-03-12 13:18:35.951303",
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [],
+ "idx": 0,
+ "is_standard": "Yes",
+ "letterhead": null,
+ "modified": "2025-03-12 13:54:32.014593",
+ "modified_by": "Administrator",
+ "module": "Airport Shop Management",
+ "name": "Monthly Shop Amount",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "query": "SELECT \n    month(payment_date) AS month,\n    shop, \n    tenant, \n    SUM(rent_amount) AS total_rent_collected\nFROM `tabRent Payment`\nGROUP BY month(payment_date), shop, tenant;\n",
+ "ref_doctype": "Rent Payment",
+ "report_name": "Monthly Shop Amount",
+ "report_type": "Query Report",
+ "roles": [
+  {
+   "role": "System Manager"
+  }
+ ],
+ "timeout": 0
+}
