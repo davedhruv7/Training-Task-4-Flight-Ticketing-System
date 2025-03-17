@@ -88,6 +88,18 @@ override_whitelisted_methods = {
     "airplane_mode.api.sign_up": "airplane_mode.api.sign_up"
 }
 
+scheduler_events = {
+    "monthly": [
+        "airplane_mode.airplane_mode.scripts.rent_reminder.send_rent_reminder"
+    ]
+}
+
+scheduler_events = {
+    "monthly": [
+        "airplane_mode.scripts.rent_reminder.send_rent_reminder"
+    ]
+}
+
 
 # Installation
 # ------------
