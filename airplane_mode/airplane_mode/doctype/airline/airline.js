@@ -11,15 +11,18 @@
 //     }
 // });
 
-
-
 frappe.ui.form.on('Airline', {
-    refresh(frm) {
+    refresh: function(frm) {
         if (frm.doc.website) {
             frm.add_web_link(__(frm.doc.website), 'Visit Website');
         }
-	},
-    website: function(frm) {
-        frm.trigger('refresh');
     }
 });
+
+// frappe.ui.form.on('Airline', {
+//     refresh(frm) {
+        // if (frm.doc.website) {
+        //     frm.add_web_link(__(frm.doc.website), 'Visit Website');
+        // }
+// 	},
+// });
